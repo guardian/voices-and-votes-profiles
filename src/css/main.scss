@@ -1,8 +1,6 @@
 @import "mq";
 @import "fonts";
-
-// Uncomment for embeds
-//@import "embed";
+@import "embed";
 
 // Uncomment for full screen (including immersive article main media)
 //@import "fullscreen";
@@ -10,4 +8,127 @@
 .element-atom,
 .interactive-atom {
     margin: 0 !important;
+}
+
+.voices-and-votes {
+  &.lab {
+    color: #e42729;
+  }
+  &.con {
+    color: #1a60a9;
+  }
+  &.snp {
+    color: #fed905;
+  }
+}
+
+.voices-and-votes__header {
+  position: relative;
+}
+
+.voices-and-votes__logo {
+  position: absolute;
+  right: -125px;
+  width: 236px;
+  top: -100px;
+
+  svg {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.voices-and-votes__header, .voices-and-votes__content {
+  padding-left: 8px;
+  padding-right: 8px;
+  h1 {
+
+    @include mq($until: 325px){
+      font-size: 20px;
+      line-height: 20px !important;
+    }
+
+    font-family: $f-serif-headline;
+    font-size: 30px;
+    font-weight: 200;
+    line-height: 8px;
+    margin: 6px 0px 18px 0px;
+    color: inherit;
+
+    span {
+      @include mq($until: 325px){
+        margin-top: 0px;
+      }
+
+      display: block;
+      font-family: $f-sans-serif-text;
+      font-size: 14px;
+      line-height: 18px;
+      margin-top: 10px;
+      color: #333;
+    }
+
+    &.voices-and-votes__intro {
+        margin-bottom: 0px;
+    }
+  }
+
+  h3 {
+    @include mq($until: 325px){
+      margin-bottom: 0px;
+    }
+    font-family: $f-sans-serif-text;
+    font-weight: 900;
+    font-size: 14px;
+    line-height: 14px;
+    color: #767676;
+    margin: 0 0 12px 0;
+  }
+}
+
+.voices-and-votes__data {
+  clear: both;
+  width: 100%;
+  border-bottom: 1px solid #c7c7c7;
+  padding-top: 6px;
+  overflow: hidden;
+  margin-bottom: 16px;
+
+  h1 {
+    @include mq($until: 325px){
+      line-height: 20px !important;
+    }
+
+    width: 30%;
+    float: left;
+    margin-bottom: 0;
+    line-height: 30px;
+    border-right: 1px solid #c7c7c7;
+    min-height: 60px;
+    padding-left: 8px;
+
+    span {
+      line-height: 0;
+      margin-top: 10px;
+    }
+
+    &:first-child{
+      padding-left: 0;
+    }
+
+    &:last-child{
+      clear: right;
+      border: none;
+    }
+  }
+}
+
+.voices-and-votes__header {
+  padding-top: 6px;
+  border-bottom: 1px solid #c7c7c7;
+  margin-bottom: 6px;
+
+  h1 {
+    font-weight: 900;
+  }
 }
